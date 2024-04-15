@@ -1,0 +1,16 @@
+.works-pic{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+
+}
+
+
+.works-pic2{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+
+}
+
+
