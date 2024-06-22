@@ -1,0 +1,713 @@
+
+/* PC用スタイル */
+@media screen and (min-width: 768px) {
+
+  body{
+    margin: 0 auto;
+    
+  }
+
+  
+
+  /* main */
+  .main{
+    background-image: url(images/mainvisual-pc.jpg);
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  .main_title{
+    color: aliceblue;
+    writing-mode: vertical-rl;
+    margin-left: auto;
+  }
+
+
+  .main_title >h1{
+    margin-left: 80px;
+    margin-right: 60px;
+    margin-top: 60px
+  }
+
+  .main_nav{
+    margin-top: 60px;
+  }
+
+  .main_nav_a{
+    margin-left: 32px;
+  }
+
+  .main_nav_a > a{
+    text-decoration: none;
+    color: aliceblue;
+    
+  }
+  
+  .main_btn{
+    width: 70px;
+    height: 300px;
+    color: aliceblue;
+    writing-mode: vertical-rl;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+  }
+
+  .main_btn >a{
+    text-decoration: none;
+    color: aliceblue;
+  }
+
+/* 
+  /*下からフェードイン
+.fade-in-bottom {
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein-bottom {
+  0% {
+     opacity: 0;
+     transform: translateY(20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+
+  /*下からフェードイン2
+  .fade-in-bottom2 {
+    opacity: 0;
+    animation-name: fadein-bottom;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadein-bottom {
+    0% {
+       opacity: 0;
+       transform: translateY(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+  } */
+
+
+  /* main2 */
+
+  #main2{
+    width: 100%;
+    height: 100vh;
+    background-color: #e6e2d7;
+    position: relative;
+
+  }
+
+  .main2_title{
+    position: absolute;
+    right: 15%;
+    top: 10%;
+    color: black;
+    writing-mode: vertical-rl;
+    
+  }
+
+  .en{
+    display: block;
+  }
+
+  .ja{
+    display: block;
+  }
+  .main2_h2{
+    
+  }
+
+  .main2_sab{
+    color: black;
+    writing-mode: vertical-rl;
+    margin-right: 60px;
+    margin-top: 40px;
+
+  }
+
+
+  .main2_sab > dl >dt{
+    border-right: solid 1px #000;
+    font-size: 0.75rem;
+    padding: 15px 30px 15px 5px;
+  }
+
+  .main2_sab > dl >dd{
+    padding: 15px 0 15px 30px;
+  }
+
+
+  /* test */
+  .products {
+    display: flex;
+    
+    
+  }
+  .products .section-title {
+    font-weight: normal;
+    line-height: 1;
+  }
+  .products .section-title .ja {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+  }
+  .products .section-title .en {
+    font-size: 0.875rem;
+  }
+
+  /*
+画像の上にテキストを重ねるためのpositionを設定
+*/
+.products .img {
+  margin-top: 100px;
+  position: relative;
+  margin-bottom: 180px;
+  
+}
+
+.img > img{
+  width: 640px;
+  height: 430px;
+}
+/*
+「position: absolute;」でテキストを画像の上に配置
+左右の配置位置は「#products1」と「#products2」で個別に指定
+*/
+.products .text {
+  width: 56%;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+  position: absolute;
+  bottom: -20px;
+  
+}
+
+/*
+productsの共通定義以外は、idを指定（#products1、#products2）して個別に設定
+*/
+/*-------------------------------------------
+Products1
+-------------------------------------------*/
+/*
+そのままではタイトルが左にくるため、「row-reverse」で順序を入れ替える。
+*/
+#products1 {
+  flex-direction: row-reverse;
+  background-color: #e6e2d7;
+}
+#products1 .section-title {
+  margin-left: 20px;
+  writing-mode: vertical-lr;
+}
+#products1 .text {
+  background: rgba(249, 233, 6, 0.6);
+  left: -20px;
+}
+
+/*-------------------------------------------
+Products2
+-------------------------------------------*/
+#products2{
+  background-color: #e6e2d7;
+}
+
+#products2 .section-title {
+  margin-right: 20px;
+  writing-mode: vertical-rl;
+  
+}
+#products2 .text {
+  background: rgba(149, 42, 38, 0.6);
+  right: -20px;
+}
+
+
+  /* main3 */
+/* 
+  #main3{
+    width: 100%;
+    height: 200vh;
+    position: relative; 
+    background-color: #e6e2d7;
+    
+  }
+
+  .main3_right{
+    height: 50%;
+    background-color: yellow;
+    position: absolute;
+    left: 10%;
+    
+     追加
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    transform: translateY(150px); 
+    
+  }
+
+  .main3_left{
+    margin-right: auto;
+    height: 50%;
+    background-color: aquamarine;
+    position: absolute;
+    right: 10%;
+    
+  }
+
+    フェードイン用のCSS
+.slide-bottom {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.3s 0s ease-out;
+} 
+
+  .main3_title{
+    color: black;
+    writing-mode: vertical-rl; 
+    display: flex; 
+    margin-left: auto;
+
+    /* 追加
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    transform: translateY(150px);  
+  }
+
+  .main3_img{
+    margin-left: auto;
+  }
+
+
+
+  .main3_title > h2{
+    font-size: 32px;
+  } 
+
+  .main3_title_2 > h2{
+    font-size: 32px;
+  } 
+
+
+  .main3_title > p{
+    margin-right: 32px;
+  }
+
+  .main3_title_2 > p{
+    margin-right: 32px;
+  }
+
+  
+
+  .main3_img > img{
+    width: 639px;
+    height: 430px;
+  }
+
+  .main3_p{
+    width: 360px;
+    height: 150px;
+    
+    background-color: yellow;
+    text-align: center;
+    opacity: .5;
+    line-height: 150px;
+    
+  }
+
+
+  .main3_title_2{
+    
+    
+    color: black;
+    writing-mode: vertical-rl;
+    display: flex;
+
+  }
+
+  .main3_img_2{
+    
+    margin-left: 60px;
+
+  }
+
+  .main3_img_2 > img{
+    width: 639px;
+    height: 430px;
+  } 
+
+  
+
+   js用追加
+  .is-active {
+    要素を表示させる
+    opacity: 1;
+    visibility: visible;
+    /*元の位置に戻す
+    transform: translateY(0);
+  } */
+
+
+
+
+  
+  /* main4 */
+
+  #main4{
+    width: 100%;
+  }
+
+
+  .main4_map > iframe{
+    width: 100%;
+  }
+
+
+
+
+
+
+  /* main5 */
+
+  #main5{
+    background-color: black;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+  }
+
+  .main5_title{
+    color: aliceblue;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+  }
+
+  .main5_title >h2{
+    margin-left: 120px;
+  }
+
+
+  .main5_nav{
+    margin-right: 30px;
+    color: aliceblue;
+    writing-mode: vertical-rl;
+  }
+
+  .main5_nav >a{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  
+  .main5_nav_2{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    display: flex; 
+    flex-direction: column;
+  }
+
+
+  .main5_nav_2 > a{
+    writing-mode: vertical-rl;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    
+  } 
+}
+
+
+@media screen and (max-width: 767px) {
+
+
+  body{
+    margin: 0 auto;
+    width: 100%;
+    
+  }
+
+  
+
+  /* main */
+  .main{
+    background-image: url(images/mainvisual-pc.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  .main_title{
+    color: aliceblue;
+    writing-mode: vertical-rl;
+    margin-left: auto;
+  }
+
+
+  .main_title >h1{
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-top: 20px
+  }
+
+  .main_nav{
+    margin-top: 20px;
+  }
+
+  .main_nav_a{
+    margin-left: 25px;
+  }
+
+  .main_nav_a > a{
+    text-decoration: none;
+    color: aliceblue;
+    
+  }
+  
+  .main_btn{
+    width: 30px;
+    height: 250px;
+    color: aliceblue;
+    writing-mode: vertical-rl;
+    position: absolute;
+    bottom: 10%;
+    
+
+    
+  }
+
+  .main_btn >a{
+    text-decoration: none;
+    color: aliceblue;
+
+  }
+
+
+  /* main2 */
+
+  #main2{
+    width: 100%;
+    height: 65vh;
+    background-color: #e6e2d7;
+    position: relative;
+
+  }
+
+  .main2_title{
+    position: absolute;
+    right: 0%;
+    top: 5%;
+    color: black;
+    writing-mode: vertical-rl;
+    
+  }
+
+  .en{
+    display: block;
+  }
+
+  .ja{
+    display: block;
+  }
+  .main2_h2{
+    
+  }
+
+  .main2_sab{
+    color: black;
+    writing-mode: vertical-rl;
+    margin-right: 0px;
+    margin-top: 40px;
+
+  }
+
+
+  .main2_sab > dl >dt{
+    border-right: solid 1px #000;
+    font-size: 0.75rem;
+    padding: 15px 30px 5px 5px;
+  }
+
+  .main2_sab > dl >dd{
+    padding: 15px 0 5px 5px;
+  }
+
+
+  /* test */
+  .products {
+    display: flex;
+    
+    
+  }
+  .products .section-title {
+    font-weight: normal;
+    line-height: 1;
+  }
+  .products .section-title .ja {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+  }
+  .products .section-title .en {
+    font-size: 0.875rem;
+  }
+
+  /*
+画像の上にテキストを重ねるためのpositionを設定
+*/
+ .img {
+  margin-top: 100px;
+  position: relative;
+  margin-bottom: 180px;
+  margin-left: 10px;
+}
+
+.img > img{
+  width: 300px;
+  height: 200px;
+  max-width: 95%;
+}
+/*
+「position: absolute;」でテキストを画像の上に配置
+左右の配置位置は「#products1」と「#products2」で個別に指定
+*/
+ .text {
+  width: 64%;
+  color: #fff;
+  padding: 25px 0;
+  text-align: center;
+  position: absolute;
+  bottom: -20px;
+ 
+}
+
+/*
+productsの共通定義以外は、idを指定（#products1、#products2）して個別に設定
+*/
+/*-------------------------------------------
+Products1
+-------------------------------------------*/
+/*
+そのままではタイトルが左にくるため、「row-reverse」で順序を入れ替える。
+*/
+#products1 {
+  flex-direction: row-reverse;
+  background-color: #e6e2d7;
+}
+#products1 .section-title {
+  margin-left: 20px;
+  writing-mode: vertical-lr;
+}
+#products1 .text {
+  background: rgba(249, 233, 6, 0.6);
+  left: 0px;
+  max-width: 100%;
+}
+
+/*-------------------------------------------
+Products2
+-------------------------------------------*/
+#products2{
+  background-color: #e6e2d7;
+}
+
+#products2 .section-title {
+  margin-right: 20px;
+  writing-mode: vertical-rl;
+  
+}
+#products2 .text {
+  background: rgba(149, 42, 38, 0.6);
+  right: 0;
+}
+
+
+
+
+  
+  /* main4 */
+
+  #main4{
+    width: 100%;
+  }
+
+
+  .main4_map > iframe{
+    width: 100%;
+  }
+
+
+
+
+
+
+  /* main5 */
+
+  #main5{
+    background-color: black;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+  }
+
+  .main5_title{
+    color: aliceblue;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+  }
+
+  .main5_title >h2{
+    margin-left: 30px;
+  }
+
+
+  .main5_nav{
+    margin-right: 10px;
+    color: aliceblue;
+    writing-mode: vertical-rl;
+  }
+
+  .main5_nav >a{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  
+  .main5_nav_2{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    display: flex; 
+    flex-direction: column;
+  }
+
+
+  .main5_nav_2 > a{
+    writing-mode: vertical-rl;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    
+  } 
+}
+
